@@ -2,9 +2,7 @@ class Play extends Phaser.Scene {
     constructor(){
         super("playScene");
     }
-    init(){
 
-    }
     preload(){
         this.load.image('rocket','./assets/rocket.png');
         this.load.image('spaceship','./assets/spaceship.png');
@@ -53,7 +51,7 @@ class Play extends Phaser.Scene {
             color:'#843605',
             align: 'right',
             padding:{
-                top: 5, bottom: 5
+                top: 5, bottom: 5,
             },
             fixedWidth: 100
         }
@@ -104,7 +102,7 @@ class Play extends Phaser.Scene {
     checkCollision(rocket, ship){
         if(rocket.x < ship.x + ship.width &&
             rocket.x + rocket.width > ship.x &&
-            rocket.y < ship.y +ship.height &&
+            rocket.y < ship.y + ship.height &&
             rocket.height + rocket.y > ship.y ){
                 return true;
             } else{
@@ -124,7 +122,7 @@ class Play extends Phaser.Scene {
         });
 
         //add score and repaint score display
-        this.p1Socre += ship.points;
+        this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score;
     }
 }

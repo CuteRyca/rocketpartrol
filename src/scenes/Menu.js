@@ -2,9 +2,7 @@ class Menu extends Phaser.Scene {
     constructor(){
         super("menuScene");
     }
-    init(){
-
-    }
+    
     preload(){
         //load audio
         this.load.audio('sfx_select', './assets/blip_select12.wav');
@@ -19,7 +17,7 @@ class Menu extends Phaser.Scene {
             color:'#843605',
             align: 'right',
             padding:{
-                top: 5, bottom: 5
+                top: 5, bottom: 5,
             },
             fixedWidth: 0
         }
